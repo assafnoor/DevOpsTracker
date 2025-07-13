@@ -121,5 +121,3 @@ If you found this project helpful, consider:
 Together, let's build meaningful open-source tools 💙
 
 ```
-
-
