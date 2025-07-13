@@ -98,7 +98,7 @@ For behavior expectations, see [CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md)
 ## 🛡️ License
 
 This project is licensed under the **MIT License**.
-See the [LICENSE](LICENSE) file for more information.
+See the [LICENSE](LICENSE.txt) file for more information.
 
 ---
 
