@@ -24,15 +24,15 @@
 
 ```bash
 devops-tracker/
-├── src/                           # الكود الأساسي
-│   ├── Services/                 # كل Microservice بوحدة مستقلة
+├── src/                           # Core source code
+│   ├── Services/                  # Each microservice lives in its own folder
 │   │   ├── IdentityService/
-│   │   │   ├── Identity.API/
-│   │   │   ├── Identity.Application/
-│   │   │   ├── Identity.Domain/
-│   │   │   ├── Identity.Infrastructure/
-│   │   │   ├── Identity.Contracts/
-│   │   │   └── Identity.Tests/                # 🆕 Unit/Integration Tests
+│   │   │   ├── Identity.API/              # ASP.NET Core API layer
+│   │   │   ├── Identity.Application/      # Application layer (CQRS, services, handlers)
+│   │   │   ├── Identity.Domain/           # Domain models, aggregates, entities, value objects
+│   │   │   ├── Identity.Infrastructure/   # Database, external integrations, repository impl
+│   │   │   ├── Identity.Contracts/        # Shared contracts (DTOs/events) for communication
+│   │   │   └── Identity.Tests/            # 🆕 Unit and Integration Tests
 │   │   ├── TrackerService/
 │   │   │   ├── Tracker.API/
 │   │   │   ├── Tracker.Application/
@@ -48,37 +48,37 @@ devops-tracker/
 │   │       ├── Notifications.Contracts/
 │   │       └── Notifications.Tests/
 │   ├── ApiGateways/
-│   │   └── YarpGateway/
+│   │   └── YarpGateway/                   # YARP-based gateway service
 │   │       ├── YarpGateway.API/
 │   │       └── YarpGateway.Tests/
-│   ├── BuildingBlocks/           # أجزاء مشتركة بين الخدمات
-│   │   ├── EventBus/             # RabbitMQ / Kafka abstractions + consumers/producers
-│   │   ├── Observability/        # Serilog, OpenTelemetry, Jaeger Exporter
-│   │   ├── SharedKernel/         # ValueObjects, Enums, Constants
-│   │   ├── Core/                 # مكونات DDD مشتركة
-│   │   └── Secrets/              # 🆕 Integration with HashiCorp Vault or Azure Key Vault
+│   ├── BuildingBlocks/                   # Reusable components across services
+│   │   ├── EventBus/                     # RabbitMQ / Kafka abstractions, producers/consumers
+│   │   ├── Observability/                # Logging, tracing (Serilog, OpenTelemetry, etc.)
+│   │   ├── SharedKernel/                 # Common value objects, enums, constants
+│   │   ├── Core/                         # DDD core interfaces (IRepository, IEntity...)
+│   │   └── Secrets/                      # 🆕 Integration with Vault (HashiCorp/Azure)
 ├── infrastructure/
-│   ├── docker/                   # Dockerfiles (multi-stage, non-root) + compose.yml
-│   ├── helm/                     # Helm charts لكل خدمة
-│   ├── k8s/                      # K8s manifests (optional)
-│   └── testcontainers/           # 🆕 دعم اختبار الخدمات باستخدام Testcontainers
+│   ├── docker/                           # Dockerfiles, Docker Compose, non-root configs
+│   ├── helm/                             # Helm charts for Kubernetes deployment
+│   ├── k8s/                              # K8s manifests (if not using Helm)
+│   └── testcontainers/                   # 🆕 Testcontainers integration (for e2e testing)
 ├── tests/
-│   ├── Unit/
-│   ├── Integration/
-│   ├── EndToEnd/
-│   └── TestContainersSamples/   # 🆕 Integration with PostgreSQL, Mongo, Rabbit
+│   ├── Unit/                             # Generic unit tests
+│   ├── Integration/                      # Integration tests across services
+│   ├── EndToEnd/                         # Full flow E2E tests
+│   └── TestContainersSamples/           # 🆕 Examples using PostgreSQL, Mongo, RabbitMQ
 ├── .github/
-│   └── workflows/                # CI/CD لكل خدمة + lint/test/build/deploy
+│   └── workflows/                        # CI/CD GitHub Actions pipelines
 │       ├── ci-identity.yml
 │       ├── ci-tracker.yml
 │       ├── ci-notifications.yml
 │       └── deploy.yml
 ├── scripts/
-│   ├── setup.ps1                # 🆕 سكربت أوتوماتيكي لإنشاء البيئة محليًا
-│   └── seed-dev-data.sh         # 🆕 لإضافة بيانات مبدئية
+│   ├── setup.ps1                         # 🆕 PowerShell script to bootstrap local dev
+│   └── seed-dev-data.sh                  # 🆕 Seed development database with sample data
 ├── docs/
-│   ├── ADRs/                    # 🆕 Architecture Decision Records (لماذا Rabbit؟ لماذا Mongo؟...)
-│   ├── diagrams/                # 🆕 C4 / Sequence / Flowcharts
+│   ├── ADRs/                             # 🆕 Architecture Decision Records (why RabbitMQ? why MongoDB?)
+│   ├── diagrams/                         # 🆕 C4, sequence diagrams, system flowcharts
 │   ├── README.md
 │   └── CONTRIBUTING.md
 ├── .editorconfig
@@ -100,7 +100,7 @@ For now:
 ```bash
 git clone https://github.com/YOUR_USERNAME/DevOpsTracker.git
 cd DevOpsTracker
-# run docker-compose or Aspire commands
+# dotnet run
 ```
 
 ---
@@ -120,7 +120,7 @@ cd DevOpsTracker
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE.txt) file for details.
 
 ---
 
