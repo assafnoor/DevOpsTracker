@@ -119,5 +119,3 @@ If you found this project helpful, consider:
 * Opening an issue or PR 💬
 
 Together, let's build meaningful open-source tools 💙
-
-```
