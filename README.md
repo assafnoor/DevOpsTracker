@@ -52,7 +52,7 @@ devops-tracker/
 > Full setup instructions coming soon. For now, you can clone and experiment:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/DevOpsTracker.git
+git clone https://github.com/assafnoor/DevOpsTracker.git
 cd DevOpsTracker
 
 # Run using Docker Compose (soon)
