@@ -91,13 +91,14 @@ Whether you're fixing a bug, improving docs, or building a new feature — your 
 5. Open a **Pull Request**
 
 Please check out the [CONTRIBUTING.md](docs/CONTRIBUTING.md) for more details.
+For behavior expectations, see [CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md)
 
 ---
 
 ## 🛡️ License
 
 This project is licensed under the **MIT License**.
-See the [LICENSE](LICENSE) file for more information.
+See the [LICENSE](LICENSE.txt) file for more information.
 
 ---
 
