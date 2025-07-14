@@ -1,6 +1,26 @@
-@Identity.API_HostAddress = http://localhost:5077
+@Identity.API_HostAddress = http://localhost:8080
 
-GET {{Identity.API_HostAddress}}/weatherforecast/
+GET {{Identity.API_HostAddress}}/health/
 Accept: application/json
 
 ###
+POST {{Identity.API_HostAddress}}/api/authentication/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "Email": "john.doe@example.com",
+  "Password": "yourPassword123"
+}
+
+###
+POST {{Identity.API_HostAddress}}/api/authentication/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "FirstName": "John",
+  "LastName": "Doe",
+  "Email": "john.doe@example.com",
+  "Password": "yourPassword123"
+}

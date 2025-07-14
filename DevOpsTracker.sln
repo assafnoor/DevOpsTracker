@@ -11,11 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityService", "Identity
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.API", "src\Services\IdentityService\Identity.API\Identity.API.csproj", "{1AD11BAB-7D83-48C5-B787-783874D1A9A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "identity.infrastructure", "src\Services\IdentityService\identity.infrastructure\identity.infrastructure.csproj", "{5010E4E6-E0BB-4056-B35C-A84C59068FE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Infrastructure", "src\Services\IdentityService\identity.infrastructure\Identity.Infrastructure.csproj", "{5010E4E6-E0BB-4056-B35C-A84C59068FE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "identity.Application", "src\Services\IdentityService\identity.Application\identity.Application.csproj", "{0B611156-698B-4B24-9735-2C9245B51E8E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Application", "src\Services\IdentityService\identity.Application\Identity.Application.csproj", "{0B611156-698B-4B24-9735-2C9245B51E8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "identity.Domain", "src\Services\IdentityService\identity.Domain\identity.Domain.csproj", "{9D7A5F69-4820-475A-A35B-389206E9B63C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Domain", "src\Services\IdentityService\identity.Domain\Identity.Domain.csproj", "{9D7A5F69-4820-475A-A35B-389206E9B63C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Contracts", "src\Services\IdentityService\Identity.Contracts\Identity.Contracts.csproj", "{893C946B-774E-4BEF-80B1-5D5837C5349C}"
 EndProject
@@ -34,6 +34,17 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracker.Api", "src\Services\TrackerService\Tracker.Api\Tracker.Api.csproj", "{A38C2AEE-3236-4A76-BA02-20989F0E6FE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracker.Tests", "src\Services\TrackerService\Tracker.Tests\Tracker.Tests.csproj", "{36708CF3-B373-44B6-8F85-4C1FE32D05D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{40CEE2A2-E8F4-4628-903F-C1114F36CDA9}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		.env.example = .env.example
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		docker-compose.yml = docker-compose.yml
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
