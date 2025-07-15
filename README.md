@@ -1,9 +1,10 @@
 # 🚀 DevOpsTracker
 
+
 **DevOpsTracker** is a modular, open-source, cloud-native platform for monitoring and tracking DevOps environments — built with **.NET 9**, **Aspire**, **Docker**, and **Kubernetes**.
-
+>⚠️ Project under development - This warehouse contains the basic structure and expansion plans
+---
 > Designed to demonstrate strong backend engineering and real-world DevOps practices — ready for extension, learning, or contribution.
-
 ---
 
 ## 🧰 Tech Stack
